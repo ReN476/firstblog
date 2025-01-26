@@ -4,12 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>私のブログ</title>
+    <style>
+        /* 全体のリセット */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        header {
+            background-color: #1e90ff;
+            color: #fff;
+            padding: 20px 10px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .blog-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+        .blog-list li {
+            margin: 15px 0;
+        }
+        .blog-list a {
+            text-decoration: none;
+            color: #1e90ff;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+        .blog-list a:hover {
+            color: #ff6347;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
-    <h1>ようこそ！</h1>
-    <p>これはGitHub Pagesで作ったブログです。</p>
+    <header>
+        <h1>私のブログ</h1>
+        <p>日々の記録や考えを書き留めています</p>
+    </header>
+    <div class="container">
+        <h2>記事一覧</h2>
+        <ul class="blog-list">
+            <li><a href="blog1.html">ブログ記事1 - 初めての記事</a></li>
+            <li><a href="blog2.html">ブログ記事2 - 趣味について</a></li>
+            <li><a href="blog3.html">ブログ記事3 - 最近の学び</a></li>
+        </ul>
+    </div>
+    <footer>
+        <p>&copy; 2025 私のブログ</p>
+    </footer>
 </body>
 </html>
-<ul>
-    <li><a href="blog1.html">ブログ記事1</a></li>
-</ul>
