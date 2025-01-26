@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ブログ記事1</title>
+</head>
+<body>
+    <h1>ブログ記事1</h1>
+    <p>これが最初の記事の内容です。</p>
+    <a href="index.html">ホームに戻る</a>
+</body>
+</html>
