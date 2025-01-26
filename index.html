@@ -1,84 +1,176 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>私のブログ</title>
+    <title>プログラミング初心者の雑記ブログ</title>
     <style>
-        /* 全体のリセット */
-        * {
+        /* 全体の基本設定 */
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Arial', sans-serif;
             background-color: #f4f4f9;
-            color: #333;
-            line-height: 1.6;
+        }
+
+        /* ヘッダーのスタイル */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00bcd4;
+        }
+
+        /* メインコンテナ */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
             padding: 20px;
         }
-        header {
-            background-color: #1e90ff;
-            color: #fff;
-            padding: 20px 10px;
-            text-align: center;
-            border-radius: 10px;
+
+        /* カードグリッド */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
-        header p {
-            font-size: 1.2em;
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h3 {
+            margin: 0 0 10px;
+            color: #333;
+        }
+
+        .card-content p {
+            margin: 0;
+            color: #777;
+        }
+
+        /* サイドバーのスタイル */
+        .sidebar {
             background: #fff;
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .blog-list {
-            list-style: none;
-            margin-top: 20px;
+
+        .sidebar h2 {
+            margin-top: 0;
         }
-        .blog-list li {
-            margin: 15px 0;
+
+        .sidebar img {
+            width: 100%; /* 親要素に合わせたサイズ */
+            max-width: 200px; /* 最大幅を固定 */
+            height: auto; /* 縦横比を維持 */
+            max-height: 200px; /* 最大高さを固定 */
+            object-fit: cover; /* 縦横比を保持しながら切り抜き */
+            border-radius: 8px;
         }
-        .blog-list a {
-            text-decoration: none;
-            color: #1e90ff;
-            font-weight: bold;
-            font-size: 1.2em;
-            transition: color 0.3s ease;
+
+        .search-box {
+            display: flex;
+            margin-top: 10px;
         }
-        .blog-list a:hover {
-            color: #ff6347;
+
+        .search-box input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
         }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            color: #555;
+
+        .search-box button {
+            padding: 8px 12px;
+            border: none;
+            background: #00bcd4;
+            color: #fff;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .search-box button:hover {
+            background: #008c9e;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>私のブログ</h1>
-        <p>日々の記録や考えを書き留めています</p>
+        <h1>プログラミング初心者の雑記ブログ</h1>
+        <nav>
+            <ul>
+                <li><a href="#">ホーム</a></li>
+                <li><a href="#">日記</a></li>
+                <li><a href="#">写真</a></li>
+            </ul>
+        </nav>
     </header>
+
     <div class="container">
-        <h2>記事一覧</h2>
-        <ul class="blog-list">
-            <li><a href="blog1.html">ブログ記事1 - 初めての記事</a></li>
-            <li><a href="blog2.html">ブログ記事2 - 趣味について</a></li>
-            <li><a href="blog3.html">ブログ記事3 - 最近の学び</a></li>
-        </ul>
+        <!-- メインコンテンツ -->
+        <div class="grid">
+            <div class="card">
+                <img src="IMG_1950-2.jpg" alt="私の撮った蓮の花">
+                <div class="card-content">
+                    <h3>GPTにブログのテンプレを作ってもらった話</h3>
+                    <p>ブログ作成 1日目</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="2T3A4824.jpg" alt="雨の降る夜の商店街">
+                <div class="card-content">
+                    <h3>特になし</h3>
+                    <p></p>
+                </div>
+        </div>
     </div>
-    <footer>
-        <p>&copy; 2025 私のブログ</p>
-    </footer>
 </body>
 </html>
